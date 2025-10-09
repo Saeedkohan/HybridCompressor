@@ -1,0 +1,49 @@
+﻿# ------------------------
+# C++ / CLion
+# ------------------------
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.log
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.idb
+*.out
+*.o
+*.a
+*.lib
+*.dll
+
+# ------------------------
+# Python
+# ------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+.python-version
+.env
+.venv/
+*.egg-info
+dist/
+build/
+
+# ------------------------
+# IDE specific
+# ------------------------
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+
+# ------------------------
+# Misc
+# ------------------------
+*.tmp
+*.bak
+*.old
