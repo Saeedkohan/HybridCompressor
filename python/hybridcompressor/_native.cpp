@@ -9,8 +9,6 @@ using namespace hc;
 PYBIND11_MODULE(_core, m) {
     m.doc() = "C++ core module for HybridCompressor (via pybind11)";
 
-    py::class_<HybridCompressor>(m, "HybridCompressor")
-            .def(py::init<>())
-            .def("compress", &HybridCompressor::compress,
+    py::class_<HybridCompressor>(m, "HybridCompressor").def(py::init<>()).def("compress", &HybridCompressor::compress,
                  "Compresses the input HTML string and returns the minified string.");
 }
