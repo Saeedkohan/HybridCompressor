@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#include <queue>
+
 #include "Token.h"
 #include <string>
 
@@ -15,5 +17,13 @@ namespace hc {
         void advance(size_t count = 1);
         Token readText();
         Token readTag();
+        std::string readAttributeName();
+        std::string readAttributeValue();
+        void skipWhitespace();
+
+    private:
+            std::queue<Token> tokenQueue;
+
+
     };
 }

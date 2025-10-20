@@ -10,6 +10,11 @@
          COMMENT,
          ATTRIBUTE,
          END_OF_FILE,
+         SELF_CLOSING_TAG,
+         ATTRIBUTE_NAME,
+         ATTRIBUTE_VALUE,
+
+
          UNKNOWN
      };
 
