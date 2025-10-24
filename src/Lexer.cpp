@@ -1,5 +1,12 @@
 ﻿#include "hybridcompressor/Lexer.h"
 
+// hc::Lexer::Lexer(std::string input_source) {
+//
+// }
+
+hc::Lexer::Lexer(std::string input_source) : source(std::move(input_source)) {
+}
+
 hc::Token hc::Lexer::getNextToken() {
     if (!tokenQueue.empty()) {
         Token tok = tokenQueue.front();
