@@ -11,5 +11,6 @@ namespace hc {
 
 
         std::string compress(const std::string &input_html);
+        std::string minifyText(const std::string &text);
     };
 }
