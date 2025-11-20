@@ -58,7 +58,7 @@ namespace hc {
                 output += minifyText(token.value);
             }
         }
-        return input_html;
+        return output;
     }
 
     std::string HybridCompressor::minifyText(const std::string &text) {

@@ -5,7 +5,9 @@ class TokenType(Enum):
     END_TAG = 1
     TEXT = 2
     COMMENT = 3
+
     ATTRIBUTE = 4
+
     ATTRIBUTE_NAME = 5
     ATTRIBUTE_VALUE = 6
     SELF_CLOSING_TAG = 7
