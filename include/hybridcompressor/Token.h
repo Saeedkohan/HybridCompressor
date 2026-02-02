@@ -3,7 +3,6 @@
 #include <optional>
 
 namespace hc {
-
     enum class TokenType {
         START_TAG,
         END_TAG,

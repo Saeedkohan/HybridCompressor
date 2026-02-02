@@ -7,8 +7,9 @@
 
 namespace hc {
     class Parser {
-        public:
+    public:
         explicit Parser(std::string input_source);
+
         ASTNode::Ptr parse();
 
     private:
@@ -16,9 +17,11 @@ namespace hc {
         Token currentToken;
 
         void consume(TokenType expectedType);
+
         void getNextToken();
 
         ASTNode::Ptr parseElement();
+
         ASTNode::Ptr parseText();
     };
 }

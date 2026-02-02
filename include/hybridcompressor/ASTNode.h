@@ -10,19 +10,26 @@ namespace hc {
         TEXT,
         COMMENT,
     };
+    // Abstract Syntax Tree
     class ASTNode {
-        public:
+    public:
         using Ptr = std::shared_ptr<ASTNode>;
+//         داخل این scope، اسم Ptr از این به بعد مترادف با
+//          std::shared_ptr<ASTNode> هست.
+
         NodeType type;
         std::string content;
         std::vector<Ptr> children;
-        ASTNode* parent=nullptr;
-        ASTNode(NodeType type,std::string content=""):type(type),content(std::move(content)) {}
+        ASTNode *parent = nullptr;
+
+        ASTNode(NodeType type, std::string content = ""): type(type), content(std::move(content)) {
+        }
 
         void addChild(Ptr child) {
             child->parent = this;
             children.push_back(std::move(child));
         }
+
         virtual ~ASTNode() = default;
     };
 }
