@@ -1,6 +1,6 @@
 # HybridCompressor
 
-![HybridCompressor Banner](/gen?prompt=futuristic+abstract+data+compression+banner+with+c%2B%2B+and+python+logos+merging+dark+blue+and+neon+green+lighting+tech+style&aspect=16:9)
+![HybridCompressor Banner](assets/Banner.png)
 
 **High-Performance Next-Gen HTML Parser & Minifier Engine**
 *Powered by Modern C++ Core with Seamless Python Bindings via Pybind11*
@@ -8,7 +8,7 @@
 ![C++](https://img.shields.io/badge/C%2B%2B-20-blue.svg?style=for-the-badge&logo=c%2B%2B)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow.svg?style=for-the-badge&logo=python)
 ![CMake](https://img.shields.io/badge/Build-CMake-green.svg?style=for-the-badge&logo=cmake)
-![License](https://img.shields.io/badge/License-MIT-orange.svg?style=for-the-badge)
+
 
 ---
 
@@ -21,7 +21,7 @@ Currently, it features a robust **Recursive Descent Parser** that builds a custo
 ## 🏗 System Architecture
 The project follows a classic compiler design pipeline, ensuring modularity and ease of debugging.
 
-![Architecture Diagram](/gen?prompt=minimalist+diagram+flowchart+of+compiler+design+showing+lexer+to+parser+to+ast+tree+to+output+on+dark+background&aspect=16:9)
+![Architecture Diagram](assets/Architecture.png)
 
 *   **Lexer (Tokenizer):** Reads the raw input stream and generates atomic `Token` objects (StartTag, EndTag, Text, Attributes). It handles state transitions internally.
 *   **Parser:** Consumes tokens and constructs the **AST** (Abstract Syntax Tree) using the Recursive Descent algorithm. It validates the HTML structure on the fly.
@@ -39,7 +39,7 @@ The project follows a classic compiler design pipeline, ensuring modularity and 
 ## 🔮 Future Roadmap (Planned)
 We are actively working on version 2.0 with these advanced capabilities:
 
-![Multithreading](/gen?prompt=abstract+visualization+of+multi-threaded+cpu+processing+glowing+parallel+lines+speed+motion+blur+cyberpunk+style&aspect=16:9)
+
 
 *   **Multithreading Support:** Releasing the Python GIL to allow parallel parsing of multiple documents on multi-core CPUs.
 *   **Binary Serialization:** Ability to save/load the parsed AST to a binary format (e.g., FlatBuffers) for caching.
