@@ -1,8 +1,5 @@
 ﻿#include "hybridcompressor/Lexer.h"
 
-// hc::Lexer::Lexer(std::string input_source) {
-//
-// }
 
 hc::Lexer::Lexer(std::string input_source) : source(std::move(input_source)) {
 }

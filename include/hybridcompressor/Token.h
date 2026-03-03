@@ -29,8 +29,8 @@ namespace hc {
         size_t column = 1;
         size_t offset = 0;
 
-    private:
         Token() = default;
+        Token(TokenType type, std::string value ,size_t line=1 ,size_t column=1 ,size_t offset=0) : type(type), value(value),line(line),column(column),offset(offset) {}
 
     public:
         static Token makeText(const std::string &val, size_t line = 1, size_t column = 1, size_t offset = 0) {
