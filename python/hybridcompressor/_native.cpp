@@ -17,7 +17,7 @@ PYBIND11_MODULE(_core, m) {
             .value("END_TAG", hc::TokenType::END_TAG)
             .value("TEXT", hc::TokenType::TEXT)
             .value("COMMENT", hc::TokenType::COMMENT)
-            .value("ATTRIBUTE", hc::TokenType::ATTRIBUTE)
+            // .value("ATTRIBUTE", hc::TokenType::ATTRIBUTE)
             .value("ATTRIBUTE_NAME", hc::TokenType::ATTRIBUTE_NAME)
             .value("ATTRIBUTE_VALUE", hc::TokenType::ATTRIBUTE_VALUE)
             .value("SELF_CLOSING_TAG", hc::TokenType::SELF_CLOSING_TAG)
