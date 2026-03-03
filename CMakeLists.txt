@@ -63,7 +63,8 @@ add_custom_command(
 
 add_executable(HybridCompressor_Test src/main.cpp
         include/hybridcompressor/HybridCompressor.h
-        src/HybridCompressor.cpp)
+        src/HybridCompressor.cpp
+        src/Lexer.cpp)
 target_include_directories(HybridCompressor_Test PRIVATE
         "${CMAKE_CURRENT_SOURCE_DIR}/include"
 )
