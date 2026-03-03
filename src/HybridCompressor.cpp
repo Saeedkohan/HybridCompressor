@@ -1,5 +1,6 @@
 ﻿#include "hybridcompressor/HybridCompressor.h"
 #include <iostream>
+#include <cctype>
 
 namespace hc {
     std::string HybridCompressor::compress(const std::string &input_html) {
@@ -61,24 +62,15 @@ namespace hc {
         return output;
     }
 
-    std::string HybridCompressor::minifyText(const std::string &text) {
-        bool hasNonSpace = false;
-        for (char c: text) {
-            if (c != ' ' && c != '\t' && c != '\n' && c != '\r') {
-                hasNonSpace = true;
-                break;
-            }
-        }
-        if (!hasNonSpace) {
-            return "";
-        }
 
+    std::string HybridCompressor::minifyText(const std::string &text) {
         std::string result;
         result.reserve(text.size());
 
         bool lastWasSpace = false;
-        for (char c: text) {
-            if (c == ' ' || c == '\t' || c == '\n' || c == '\r') {
+
+        for (unsigned char c : text) {
+            if (std::isspace(c)) {
                 if (!lastWasSpace && !result.empty()) {
                     result += ' ';
                     lastWasSpace = true;
@@ -88,6 +80,9 @@ namespace hc {
                 lastWasSpace = false;
             }
         }
+
+        if (!result.empty() && result.back() == ' ')
+            result.pop_back();
 
         return result;
     }
