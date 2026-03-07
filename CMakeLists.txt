@@ -59,6 +59,13 @@ target_link_libraries(HybridCompressor_Test PRIVATE hc_core)
 # ---- Lexer regression tests executable ----
 add_executable(Lexer_Tests
         tests/lexer_tests.cpp
+        tests/ast_tests.cpp
 )
 
 target_link_libraries(Lexer_Tests PRIVATE hc_core)
+
+add_executable(AST_Tests
+        tests/ast_tests.cpp
+)
+
+target_link_libraries(AST_Tests PRIVATE hc_core)
