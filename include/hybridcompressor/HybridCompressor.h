@@ -2,6 +2,7 @@
 
 #include "Parser.h"
 #include "ASTNode.h"
+#include "Lexer.h"
 #include <string>
 
 namespace hc {
